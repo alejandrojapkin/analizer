@@ -1,5 +1,5 @@
 //
-//  LRModel.h
+//  LatticeModel.h
 //  ANALIZER
 //
 //  Created by Pato Churro on 1/22/15.
@@ -7,15 +7,15 @@
 //
 
 
-#ifndef LRMODEL_H_
-#define LRMODEL_H_
+#ifndef LATTICEMODEL_H_
+#define LATTICEMODEL_H_
 
 #include <string>
 #include <vector>
 #include <array>
 #include <map>
 
-class LRModel {
+class LatticeModel {
 public:
     // Constructor for training a new model.
     // Inputs:
@@ -26,12 +26,12 @@ public:
     //  alpha: gradient descent step size parameter
     //  lambda: regularization parameter
     //  e: convergence parameter: stop when the norm of the gradient falls below this value.
-    LRModel(int n, int t, const std::vector<std::vector<double>>& data, double alpha, double lambda, double e);
+    LatticeModel(int n, int t, const std::vector<std::vector<double>>& data, double alpha, double lambda, double e);
     
     // Constructor for reading saved model from disk.
-    LRModel(const std::string& filename);
+    LatticeModel(const std::string& filename);
     
-    virtual ~LRModel();
+    virtual ~LatticeModel();
     
     // Save the model in a serialized format on disk.
     void writeToDisk(const std::string& filename) const;
@@ -89,4 +89,4 @@ private:
     void indxToCoords(int indx, int c[]) const;
 };
 
-#endif /* LRMODEL_H_ */
+#endif /* LATTICEMODEL_H_ */
