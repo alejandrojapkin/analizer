@@ -7,12 +7,12 @@
 //
 
 #include "Test.h"
-#import "LRModel.h"
+#import "LatticeModel.h"
 
 // Test instantiation of CPP class in OBJC++
 
 struct Regression {
-    LRModel lattice;
+    LatticeModel lattice;
 };
 
 // Deleted code

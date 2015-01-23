@@ -28,8 +28,8 @@
 		44126A5D1A6DEFE0000A2EF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A5C1A6DEFE0000A2EF7 /* CoreGraphics.framework */; };
 		44126A5F1A6DEFE7000A2EF7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A5E1A6DEFE7000A2EF7 /* Accelerate.framework */; };
 		44126A611A6DEFF2000A2EF7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A601A6DEFF2000A2EF7 /* AssetsLibrary.framework */; };
-		44972F941A7198D8003C8777 /* LRModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44972F931A7198D8003C8777 /* LRModel.mm */; };
-		44972F951A7198D8003C8777 /* LRModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44972F931A7198D8003C8777 /* LRModel.mm */; };
+		44972F941A7198D8003C8777 /* LatticeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44972F931A7198D8003C8777 /* LatticeModel.mm */; };
+		44972F951A7198D8003C8777 /* LatticeModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44972F931A7198D8003C8777 /* LatticeModel.mm */; };
 		44972F971A719C21003C8777 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44972F961A719C21003C8777 /* libz.dylib */; };
 		44972FAA1A71EB8C003C8777 /* ReadWrite.m in Sources */ = {isa = PBXBuildFile; fileRef = 44972FA91A71EB8C003C8777 /* ReadWrite.m */; };
 		44972FAB1A71EB8C003C8777 /* ReadWrite.m in Sources */ = {isa = PBXBuildFile; fileRef = 44972FA91A71EB8C003C8777 /* ReadWrite.m */; };
@@ -77,8 +77,8 @@
 		44126A601A6DEFF2000A2EF7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		44126A621A6DF0AB000A2EF7 /* ANALIZER-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANALIZER-Prefix.pch"; sourceTree = "<group>"; };
 		4454006851774F1514642FDE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		44972F921A7197BF003C8777 /* LRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRModel.h; sourceTree = "<group>"; };
-		44972F931A7198D8003C8777 /* LRModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LRModel.mm; sourceTree = "<group>"; };
+		44972F921A7197BF003C8777 /* LatticeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatticeModel.h; sourceTree = "<group>"; };
+		44972F931A7198D8003C8777 /* LatticeModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LatticeModel.mm; sourceTree = "<group>"; };
 		44972F961A719C21003C8777 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		44972FA91A71EB8C003C8777 /* ReadWrite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadWrite.m; sourceTree = "<group>"; };
 		44D856661A72B45E000FD795 /* Test.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 				44126A241A6DB8B6000A2EF7 /* AppDelegate.h */,
 				44126A251A6DB8B6000A2EF7 /* AppDelegate.m */,
 				44126A271A6DB8B6000A2EF7 /* RootViewController.h */,
-				44972F931A7198D8003C8777 /* LRModel.mm */,
+				44972F931A7198D8003C8777 /* LatticeModel.mm */,
 				44126A281A6DB8B6000A2EF7 /* RootViewController.m */,
 				44126A2A1A6DB8B6000A2EF7 /* DataViewController.h */,
 				44126A2B1A6DB8B6000A2EF7 /* DataViewController.m */,
@@ -175,7 +175,7 @@
 				44126A331A6DB8B6000A2EF7 /* Images.xcassets */,
 				44126A351A6DB8B6000A2EF7 /* LaunchScreen.xib */,
 				44126A201A6DB8B6000A2EF7 /* Supporting Files */,
-				44972F921A7197BF003C8777 /* LRModel.h */,
+				44972F921A7197BF003C8777 /* LatticeModel.h */,
 				44972FA91A71EB8C003C8777 /* ReadWrite.m */,
 				44D856661A72B45E000FD795 /* Test.mm */,
 				44D856671A72B45E000FD795 /* Test.h */,
@@ -360,7 +360,7 @@
 				44126A2F1A6DB8B6000A2EF7 /* ModelController.m in Sources */,
 				44126A231A6DB8B6000A2EF7 /* main.m in Sources */,
 				44126A291A6DB8B6000A2EF7 /* RootViewController.m in Sources */,
-				44972F941A7198D8003C8777 /* LRModel.mm in Sources */,
+				44972F941A7198D8003C8777 /* LatticeModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +370,7 @@
 			files = (
 				44126A431A6DB8B6000A2EF7 /* ANALIZERTests.m in Sources */,
 				44972FAB1A71EB8C003C8777 /* ReadWrite.m in Sources */,
-				44972F951A7198D8003C8777 /* LRModel.mm in Sources */,
+				44972F951A7198D8003C8777 /* LatticeModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

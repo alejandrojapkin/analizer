@@ -1,27 +1,27 @@
 //
-//  LRModel.cpp
+//  LatticeModel.cpp
 //  ANALIZER
 //
 //  Created by Pato Churro on 1/22/15.
 //  Copyright (c) 2015 Nina Corp. All rights reserved.
 //
 
-#include "LRModel.h"
+#include "LatticeModel.h"
 
 
 /*
- * LRModel.cpp
+ * LatticeModel.cpp
  * First test for NINA | Powering data-driven applications
  * Image analysis platform
  */
 
-#include "LRModel.h"
+#include "LatticeModel.h"
 
 #include <cmath>
 #include <iostream>
 #include "zlib.h"
 
-LRModel::LRModel(int n, int t, const std::vector<std::vector<double>>& data, double alpha, double lambda, double e)
+LatticeModel::LatticeModel(int n, int t, const std::vector<std::vector<double>>& data, double alpha, double lambda, double e)
 : n_(n), t_(t), div_len_(1.0/t), num_lattice_points_(pow(t+1, n)) {
     for (int i = 0; i < num_lattice_points_; i++)
         b_.push_back(1.0);
@@ -31,24 +31,24 @@ LRModel::LRModel(int n, int t, const std::vector<std::vector<double>>& data, dou
     trainModel(data, alpha, lambda, e);
 }
 
-LRModel::LRModel(const std::string& filename) {
+LatticeModel::LatticeModel(const std::string& filename) {
     gzFile inFile = gzopen(filename.c_str(), "rb");
     if (inFile == Z_NULL)
-        std::cout << "ERROR: LRModel could not open file " << filename << std::endl;
+        std::cout << "ERROR: LatticeModel could not open file " << filename << std::endl;
     
     if (gzread (inFile, (char*)(&n_), sizeof (int)) < (int) sizeof(int))
-        std::cout << "ERROR: gzread failed in LRModel reading n_" << std::endl;
+        std::cout << "ERROR: gzread failed in LatticeModel reading n_" << std::endl;
     if (gzread (inFile, (char*)(&t_), sizeof (int)) < (int) sizeof(int))
-        std::cout << "ERROR: gzread failed in LRModel reading t_" << std::endl;
+        std::cout << "ERROR: gzread failed in LatticeModel reading t_" << std::endl;
     if (gzread (inFile, (char*)(&div_len_), sizeof (double)) < (int) sizeof(double))
-        std::cout << "ERROR: gzread failed in LRModel reading div_len_" << std::endl;
+        std::cout << "ERROR: gzread failed in LatticeModel reading div_len_" << std::endl;
     if (gzread (inFile, (char*)(&num_lattice_points_), sizeof (int)) < (int) sizeof(int))
-        std::cout << "ERROR: gzread failed in LRModel reading num_lattice_points_" << std::endl;
+        std::cout << "ERROR: gzread failed in LatticeModel reading num_lattice_points_" << std::endl;
     
     double b;
     for (int i = 0; i < num_lattice_points_; i++) {
         if (gzread (inFile, (char*)(&b), sizeof (double)) < (int) sizeof(double))
-            std::cout << "ERROR: gzread failed in LRModel reading b_" << std::endl;
+            std::cout << "ERROR: gzread failed in LatticeModel reading b_" << std::endl;
         b_.push_back(b);
     }
     
@@ -57,7 +57,7 @@ LRModel::LRModel(const std::string& filename) {
     initAdjLatticePoints();
 }
 
-void LRModel::writeToDisk(const std::string& filename) const {
+void LatticeModel::writeToDisk(const std::string& filename) const {
     gzFile outFile = gzopen(filename.c_str(), "wb");
     if (outFile == Z_NULL)
         std::cout << "ERROR: gzwrite failed to open " << filename << std::endl;
@@ -65,27 +65,27 @@ void LRModel::writeToDisk(const std::string& filename) const {
     // Save: n, t, div_len_, num_lattice_points_, and b. Will need to re-calculate adj_lattice_pts_ upon reading.
     
     if (! gzwrite (outFile, (char*)(&n_), sizeof (int)))
-        std::cout << "ERROR: gzwrite failed writing n_ in LRModel:writeToDisk" << std::endl;
+        std::cout << "ERROR: gzwrite failed writing n_ in LatticeModel:writeToDisk" << std::endl;
     if (! gzwrite (outFile, (char*)(&t_), sizeof (int)))
-        std::cout << "ERROR: gzwrite failed writing t_ in LRModel:writeToDisk" << std::endl;
+        std::cout << "ERROR: gzwrite failed writing t_ in LatticeModel:writeToDisk" << std::endl;
     if (! gzwrite (outFile, (char*)(&div_len_), sizeof (double)))
-        std::cout << "ERROR: gzwrite failed writing div_len_ in LRModel:writeToDisk" << std::endl;
+        std::cout << "ERROR: gzwrite failed writing div_len_ in LatticeModel:writeToDisk" << std::endl;
     if (! gzwrite (outFile, (char*)(&num_lattice_points_), sizeof (int)))
-        std::cout << "ERROR: gzwrite failed writing num_lattice_points_ in LRModel:writeToDisk" << std::endl;
+        std::cout << "ERROR: gzwrite failed writing num_lattice_points_ in LatticeModel:writeToDisk" << std::endl;
     
     for (int i = 0; i < num_lattice_points_; i++)
         if (! gzwrite (outFile, (char*)(&(b_[i])), sizeof(double)))
-            std::cout << "ERROR: gzwrite failed in LRModel:writeToDisk" << std::endl;
+            std::cout << "ERROR: gzwrite failed in LatticeModel:writeToDisk" << std::endl;
     
     gzclose(outFile);
 }
 
-LRModel::~LRModel() {
+LatticeModel::~LatticeModel() {
     // nothing to do here yet
 }
 
 
-void LRModel::initAdjLatticePoints() {
+void LatticeModel::initAdjLatticePoints() {
     for (int i_point = 0; i_point < num_lattice_points_; i_point++) {
         std::vector<int> adj_pts; // will hold indices of points adjacent to point i_point
         
@@ -166,7 +166,7 @@ void LRModel::initAdjLatticePoints() {
 }
 
 
-void LRModel::trainModel(const std::vector<std::vector<double>>& data, double alpha, double lambda, double e) {
+void LatticeModel::trainModel(const std::vector<std::vector<double>>& data, double alpha, double lambda, double e) {
     std::vector<std::map<int,double>> weights; // weights of training examples
     std::vector<std::vector<int>> adjLatticeToData; // essentially a map from lattice points to adjacent training examples
     std::vector<std::vector<int>> adjDataToLattice; // essentially a map from training examples to adjacent lattice points
@@ -203,7 +203,7 @@ void LRModel::trainModel(const std::vector<std::vector<double>>& data, double al
      */
 }
 
-void LRModel::makeTrainingWeightsAndAdj(const std::vector<std::vector<double>>& data, std::vector<std::map<int,double>>& weights,
+void LatticeModel::makeTrainingWeightsAndAdj(const std::vector<std::vector<double>>& data, std::vector<std::map<int,double>>& weights,
                                         std::vector<std::vector<int>>& adjDataToLattice, std::vector<std::vector<int>>& adjLatticeToData) {
     weights.clear();
     adjDataToLattice.clear();
@@ -230,7 +230,7 @@ void LRModel::makeTrainingWeightsAndAdj(const std::vector<std::vector<double>>& 
     }
 }
 
-std::map<int,double> LRModel::getWeights(const double x[]) const {
+std::map<int,double> LatticeModel::getWeights(const double x[]) const {
     std::map<int,double> result;
     
     // Find the  each dimension, there's ind the upper and lower bounding tick marks for x in each dimension
@@ -286,7 +286,7 @@ std::map<int,double> LRModel::getWeights(const double x[]) const {
     return result;
 }
 
-double LRModel::predict(const double x[]) const {
+double LatticeModel::predict(const double x[]) const {
     std::map<int,double> a = getWeights(x);
     
     double result = 0.0;
@@ -297,7 +297,7 @@ double LRModel::predict(const double x[]) const {
     return result;
 }
 
-double LRModel::getRMSE(const std::vector<std::vector<double>>& data) const {
+double LatticeModel::getRMSE(const std::vector<std::vector<double>>& data) const {
     double mse = 0.0;
     for (auto datapt : data) {
         double resid = datapt[0] - predict(&datapt[1]);
@@ -307,7 +307,7 @@ double LRModel::getRMSE(const std::vector<std::vector<double>>& data) const {
     return sqrt(mse);
 }
 
-int LRModel::coordsToIndx(const int c[]) const {
+int LatticeModel::coordsToIndx(const int c[]) const {
     int result = c[0];
     for (int i = 1; i < n_; i++) {
         result *= t_+1;
@@ -316,7 +316,7 @@ int LRModel::coordsToIndx(const int c[]) const {
     return result;
 }
 
-void LRModel::indxToCoords(int indx, int c[]) const {
+void LatticeModel::indxToCoords(int indx, int c[]) const {
     for (int i = n_-1; i >=0; i--) {
         c[i] = indx % (t_+1);
         indx /= (t_+1);
