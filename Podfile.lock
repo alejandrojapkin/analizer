@@ -1,0 +1,19 @@
+PODS:
+  - CocoaLUT (0.2.21):
+    - M13OrderedDictionary
+    - RegExCategories
+    - XMLDictionary
+  - M13OrderedDictionary (1.0.6)
+  - RegExCategories (1.0)
+  - XMLDictionary (1.4)
+
+DEPENDENCIES:
+  - CocoaLUT
+
+SPEC CHECKSUMS:
+  CocoaLUT: 9b89fcd9e321cc30bde51fd678afdf6d91ac8615
+  M13OrderedDictionary: 8f721284b4960aabaf567b7894911a45cb9c71b0
+  RegExCategories: a6410301023ff81bd047c05fd8691d24ca5c7ea9
+  XMLDictionary: 735e81b9a043e220b0d24e9d4f16719606f2e0fc
+
+COCOAPODS: 0.35.0

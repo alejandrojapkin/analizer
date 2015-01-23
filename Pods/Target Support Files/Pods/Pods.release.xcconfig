@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaLUT" "${PODS_ROOT}/Headers/Public/M13OrderedDictionary" "${PODS_ROOT}/Headers/Public/RegExCategories" "${PODS_ROOT}/Headers/Public/XMLDictionary"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaLUT" -isystem "${PODS_ROOT}/Headers/Public/M13OrderedDictionary" -isystem "${PODS_ROOT}/Headers/Public/RegExCategories" -isystem "${PODS_ROOT}/Headers/Public/XMLDictionary"
+OTHER_LDFLAGS = -ObjC -l"Pods-CocoaLUT" -l"Pods-M13OrderedDictionary" -l"Pods-RegExCategories" -l"Pods-XMLDictionary" -framework "Foundation" -framework "GLKit" -framework "QuartzCore" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

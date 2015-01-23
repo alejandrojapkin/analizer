@@ -1,0 +1,1 @@
+../../../CocoaLUT/Classes/LUTMetadataFormatter.h
