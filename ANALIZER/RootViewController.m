@@ -25,6 +25,9 @@
     // Configure the page view controller and add it as a child view controller.
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"TEST!" message:@"testeando opencv" delegate:self cancelButtonTitle:@"Continuar" otherButtonTitles:nil];
+    [alert show];
 
     DataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
     NSArray *viewControllers = @[startingViewController];

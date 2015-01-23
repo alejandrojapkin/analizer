@@ -1,0 +1,21 @@
+//
+//  ANALIZER-Prefix.pch
+//  ANALIZER
+//
+//  Created by Pato Churro on 1/19/15.
+//  Copyright (c) 2015 Nina Corp. All rights reserved.
+//
+
+import <Availavility.h>
+
+#ifndef ANALIZER_ANALIZER_Prefix_pch
+#define ANALIZER_ANALIZER_Prefix_pch
+
+#ifdef __cplusplus
+#import <opencv2/opencv.hpp>
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

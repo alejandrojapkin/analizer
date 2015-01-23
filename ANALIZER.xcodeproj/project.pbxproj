@@ -16,6 +16,20 @@
 		44126A341A6DB8B6000A2EF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44126A331A6DB8B6000A2EF7 /* Images.xcassets */; };
 		44126A371A6DB8B6000A2EF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44126A351A6DB8B6000A2EF7 /* LaunchScreen.xib */; };
 		44126A431A6DB8B6000A2EF7 /* ANALIZERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44126A421A6DB8B6000A2EF7 /* ANALIZERTests.m */; };
+		44126A4D1A6DEF7E000A2EF7 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A4C1A6DEF7E000A2EF7 /* opencv2.framework */; };
+		44126A4F1A6DEFA7000A2EF7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A4E1A6DEFA7000A2EF7 /* AVFoundation.framework */; };
+		44126A511A6DEFAF000A2EF7 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A501A6DEFAF000A2EF7 /* CoreImage.framework */; };
+		44126A531A6DEFB8000A2EF7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A521A6DEFB8000A2EF7 /* CoreVideo.framework */; };
+		44126A551A6DEFBF000A2EF7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A541A6DEFBF000A2EF7 /* QuartzCore.framework */; };
+		44126A571A6DEFC5000A2EF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A561A6DEFC5000A2EF7 /* UIKit.framework */; };
+		44126A591A6DEFCC000A2EF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A581A6DEFCC000A2EF7 /* Foundation.framework */; };
+		44126A5B1A6DEFD5000A2EF7 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A5A1A6DEFD5000A2EF7 /* CoreMedia.framework */; };
+		44126A5D1A6DEFE0000A2EF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A5C1A6DEFE0000A2EF7 /* CoreGraphics.framework */; };
+		44126A5F1A6DEFE7000A2EF7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A5E1A6DEFE7000A2EF7 /* Accelerate.framework */; };
+		44126A611A6DEFF2000A2EF7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44126A601A6DEFF2000A2EF7 /* AssetsLibrary.framework */; };
+		44972F941A7198D8003C8777 /* LRModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44972F931A7198D8003C8777 /* LRModel.mm */; };
+		44972F951A7198D8003C8777 /* LRModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44972F931A7198D8003C8777 /* LRModel.mm */; };
+		44972F971A719C21003C8777 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 44972F961A719C21003C8777 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +60,21 @@
 		44126A3C1A6DB8B6000A2EF7 /* ANALIZERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ANALIZERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44126A411A6DB8B6000A2EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44126A421A6DB8B6000A2EF7 /* ANALIZERTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANALIZERTests.m; sourceTree = "<group>"; };
+		44126A4C1A6DEF7E000A2EF7 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		44126A4E1A6DEFA7000A2EF7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		44126A501A6DEFAF000A2EF7 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		44126A521A6DEFB8000A2EF7 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		44126A541A6DEFBF000A2EF7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		44126A561A6DEFC5000A2EF7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		44126A581A6DEFCC000A2EF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		44126A5A1A6DEFD5000A2EF7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		44126A5C1A6DEFE0000A2EF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		44126A5E1A6DEFE7000A2EF7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		44126A601A6DEFF2000A2EF7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		44126A621A6DF0AB000A2EF7 /* ANALIZER-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANALIZER-Prefix.pch"; sourceTree = "<group>"; };
+		44972F921A7197BF003C8777 /* LRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRModel.h; sourceTree = "<group>"; };
+		44972F931A7198D8003C8777 /* LRModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LRModel.mm; sourceTree = "<group>"; };
+		44972F961A719C21003C8777 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +82,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44972F971A719C21003C8777 /* libz.dylib in Frameworks */,
+				44126A611A6DEFF2000A2EF7 /* AssetsLibrary.framework in Frameworks */,
+				44126A5F1A6DEFE7000A2EF7 /* Accelerate.framework in Frameworks */,
+				44126A5D1A6DEFE0000A2EF7 /* CoreGraphics.framework in Frameworks */,
+				44126A5B1A6DEFD5000A2EF7 /* CoreMedia.framework in Frameworks */,
+				44126A591A6DEFCC000A2EF7 /* Foundation.framework in Frameworks */,
+				44126A571A6DEFC5000A2EF7 /* UIKit.framework in Frameworks */,
+				44126A551A6DEFBF000A2EF7 /* QuartzCore.framework in Frameworks */,
+				44126A531A6DEFB8000A2EF7 /* CoreVideo.framework in Frameworks */,
+				44126A511A6DEFAF000A2EF7 /* CoreImage.framework in Frameworks */,
+				44126A4F1A6DEFA7000A2EF7 /* AVFoundation.framework in Frameworks */,
+				44126A4D1A6DEF7E000A2EF7 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +110,18 @@
 		44126A141A6DB8B6000A2EF7 = {
 			isa = PBXGroup;
 			children = (
+				44972F961A719C21003C8777 /* libz.dylib */,
+				44126A601A6DEFF2000A2EF7 /* AssetsLibrary.framework */,
+				44126A5E1A6DEFE7000A2EF7 /* Accelerate.framework */,
+				44126A5C1A6DEFE0000A2EF7 /* CoreGraphics.framework */,
+				44126A5A1A6DEFD5000A2EF7 /* CoreMedia.framework */,
+				44126A581A6DEFCC000A2EF7 /* Foundation.framework */,
+				44126A561A6DEFC5000A2EF7 /* UIKit.framework */,
+				44126A541A6DEFBF000A2EF7 /* QuartzCore.framework */,
+				44126A521A6DEFB8000A2EF7 /* CoreVideo.framework */,
+				44126A501A6DEFAF000A2EF7 /* CoreImage.framework */,
+				44126A4E1A6DEFA7000A2EF7 /* AVFoundation.framework */,
+				44126A4C1A6DEF7E000A2EF7 /* opencv2.framework */,
 				44126A1F1A6DB8B6000A2EF7 /* ANALIZER */,
 				44126A3F1A6DB8B6000A2EF7 /* ANALIZERTests */,
 				44126A1E1A6DB8B6000A2EF7 /* Products */,
@@ -90,6 +143,7 @@
 				44126A241A6DB8B6000A2EF7 /* AppDelegate.h */,
 				44126A251A6DB8B6000A2EF7 /* AppDelegate.m */,
 				44126A271A6DB8B6000A2EF7 /* RootViewController.h */,
+				44972F931A7198D8003C8777 /* LRModel.mm */,
 				44126A281A6DB8B6000A2EF7 /* RootViewController.m */,
 				44126A2A1A6DB8B6000A2EF7 /* DataViewController.h */,
 				44126A2B1A6DB8B6000A2EF7 /* DataViewController.m */,
@@ -99,6 +153,7 @@
 				44126A331A6DB8B6000A2EF7 /* Images.xcassets */,
 				44126A351A6DB8B6000A2EF7 /* LaunchScreen.xib */,
 				44126A201A6DB8B6000A2EF7 /* Supporting Files */,
+				44972F921A7197BF003C8777 /* LRModel.h */,
 			);
 			path = ANALIZER;
 			sourceTree = "<group>";
@@ -108,6 +163,7 @@
 			children = (
 				44126A211A6DB8B6000A2EF7 /* Info.plist */,
 				44126A221A6DB8B6000A2EF7 /* main.m */,
+				44126A621A6DF0AB000A2EF7 /* ANALIZER-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,6 +290,7 @@
 				44126A2F1A6DB8B6000A2EF7 /* ModelController.m in Sources */,
 				44126A231A6DB8B6000A2EF7 /* main.m in Sources */,
 				44126A291A6DB8B6000A2EF7 /* RootViewController.m in Sources */,
+				44972F941A7198D8003C8777 /* LRModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44126A431A6DB8B6000A2EF7 /* ANALIZERTests.m in Sources */,
+				44972F951A7198D8003C8777 /* LRModel.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +370,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,6 +406,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -357,6 +417,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ANALIZER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -367,6 +431,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ANALIZER/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,6 +494,7 @@
 				44126A481A6DB8B6000A2EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44126A491A6DB8B6000A2EF7 /* Build configuration list for PBXNativeTarget "ANALIZERTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +503,7 @@
 				44126A4B1A6DB8B6000A2EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
